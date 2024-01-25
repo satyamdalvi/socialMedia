@@ -1,0 +1,103 @@
+<div class="bodyStyle">
+    <section class="container">
+        <header>Registration Form</header>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm)" class="form">
+            <div class="input-box">
+                <label>UserName</label>
+                <input type="text" placeholder="Enter user name" formControlName="username" required />
+                <small class="text-danger"
+                    *ngIf="!this.signupForm.get('username')?.errors?.['maxlength'] && !this.signupForm.get('username')?.errors?.['minlength'] && signupForm.get('username')?.invalid && (signupForm.get('username')?.dirty || signupForm.get('username')?.touched)">
+                    Please provide a username.
+                </small>
+                <small class="text-danger" *ngIf="this.signupForm.get('username')?.errors?.['minlength']">
+                    Min length is {{ this.signupForm.get('username')?.errors?.['minlength']?.requiredLength }}.
+                </small>
+                <small class="text-danger" *ngIf="this.signupForm.get('username')?.errors?.['maxlength']">
+                    Max length is {{ this.signupForm.get('username')?.errors?.['maxlength']?.requiredLength }}.
+                </small>
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="text" placeholder="Enter password" formControlName="password" required />
+                <small class="text-danger"
+                    *ngIf="!this.signupForm.get('password')?.errors?.['maxlength'] && !this.signupForm.get('password')?.errors?.['minlength'] && signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                    Please provide a password.
+                </small>
+                <small class="text-danger" *ngIf="this.signupForm.get('password')?.errors?.['minlength']">
+                    Min length is {{ this.signupForm.get('password')?.errors?.['minlength']?.requiredLength }}.
+                </small>
+                <small class="text-danger" *ngIf="this.signupForm.get('password')?.errors?.['maxlength']">
+                    Max length is {{ this.signupForm.get('password')?.errors?.['maxlength']?.requiredLength }}.
+                </small>
+            </div>
+
+            <div class="input-box">
+                <label>Email Address</label>
+                <input type="text" placeholder="Enter email address" formControlName="email" required />
+                <small class="text-danger"
+                    *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                    Please provide a valid email address.
+                </small>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Mobile Number</label>
+                    <input type="number" placeholder="Enter mobile number" formControlName="mobilenumber" required />
+                    <div *ngIf="
+                      signupForm
+                        .get('mobilenumber')
+                        ?.hasError('required') &&
+                        signupForm.get('mobilenumber')?.touched
+                    " class="text-danger" data-cy-phone="phNoRequired">
+                        Phone number is required.
+                    </div>
+                    <div *ngIf="
+                      signupForm
+                        .get('mobilenumber')
+                        ?.hasError('pattern') &&
+                        signupForm.get('mobilenumber')?.touched
+                    " class="text-danger" data-cy-VPhNo="validPNoRequired">
+                        Please enter a valid phone number.
+                    </div>
+                    <div *ngIf="
+                      signupForm
+                        .get('mobilenumber')
+                        ?.hasError('maxlength') &&
+                        signupForm.get('mobilenumber')?.touched
+                    " class="text-danger" data-cy-limit="limitRequired">
+                        Phone number cannot exceed 10 characters.
+                    </div>
+                    <div *ngIf="
+                      signupForm
+                        .get('mobilenumber')
+                        ?.hasError('minlength') &&
+                        signupForm.get('mobilenumber')?.touched
+                    " class="text-danger" data-cy-less="lessRequired">
+                        Phone number cannot be less than 10 characters.
+                    </div>
+                </div>
+            </div>
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="custom-control custom-radio">
+                    <input id="male" type="radio" class="custom-control-input" value="male" name="gender"
+                        formControlName="gender">&nbsp;
+                    <label class="custom-control-label" for="male">Male</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                    <input id="female" type="radio" class="custom-control-input" value="female" name="gender"
+                        formControlName="gender">&nbsp;
+                    <label class="custom-control-label" for="female">Female</label>
+                </div>
+            </div>
+            <small class="text-danger"
+                *ngIf="signupForm.get('gender')?.invalid && (signupForm.get('gender')?.dirty || signupForm.get('gender')?.touched)">
+                Please provide your gender.
+            </small>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</div>

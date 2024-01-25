@@ -1,0 +1,58 @@
+[
+    {
+        "serialNumber": 1,
+        "title": "Satyam",
+        "body": "The provided data, This is an awesome social media post! Sit amet consectetur adipiscing elit. Quisque in risus et quam congue bibendum a vel odio. Integer fermentum elit vel augue aliquam, nec tincidunt nunc tincidunt. Aenean consequat ante vel massa luctus, non volutpat ex aliquet. Nunc eu massa vitae justo fringilla varius nec et sem. Suspendisse at purus vitae odio consequat fermentum nec in nulla. Morbi bibendum purus ac dolor eleifend, vel euismod ex aliquet. Suspendisse potenti. Curabitur id interdum mauris. Vivamus ut dolor vel ante varius varius eget eget ipsum. Duis rhoncus, lacus vel interdum efficitur, tortor est lobortis nisi, a luctus nisi nunc sit amet elit. Nam vel tristique mi.",
+        "tags": ["#pune", "#surat", "#mumbai"],
+        "active": false
+    },
+    {
+        "serialNumber": 2,
+        "title": "Another Post",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo ac purus suscipit tristique. Vivamus eget nibh id ex laoreet tempor vel vitae purus. Quisque eget nisi vel odio lacinia tristique. Fusce eget lacus a velit congue vulputate. Nullam ac est eu dolor auctor ultricies a nec arcu. Ut ut odio at sem pellentesque efficitur vel ac nulla. Nam nec arcu eget sapien sollicitudin sodales a eu arcu. Integer sit amet lectus a libero congue congue. Aliquam erat volutpat. In hac habitasse platea dictumst.",
+        "tags": ["#new-york", "#london", "#paris"],
+        "active": true
+    },
+    {
+        "serialNumber": 3,
+        "title": "Exciting News",
+        "body": "Etiam vel turpis vel ex gravida bibendum. Integer ac ante ut nisl facilisis scelerisque. Nam efficitur elit vel hendrerit consectetur. Curabitur vel malesuada tortor. Duis ac metus quis mauris fermentum dictum nec vel justo. Nullam in quam eget justo congue dictum. Sed et aliquet leo. Aliquam erat volutpat. Fusce nec vestibulum ex. Sed lacinia sollicitudin nisl, vel fermentum orci. Ut auctor, quam a semper ultricies, justo tellus sagittis turpis, nec consequat tellus odio vitae leo. Ut eget libero vel urna ullamcorper vulputate.",
+        "tags": ["#tokyo", "#beijing", "#sydney"],
+        "active": true
+    },
+    {
+        "serialNumber": 4,
+        "title": "Tech Trends",
+        "body": "Quisque id eros eu justo aliquam fermentum. Nullam eu odio nec metus convallis commodo. Integer id dolor vel sem tincidunt tristique. Curabitur auctor, sapien quis dignissim posuere, elit tellus pharetra nunc, in tristique urna neque ut lectus. Phasellus eu felis sit amet sapien convallis fermentum. Duis vel mauris sed sem varius bibendum non in mi. In ac turpis ut quam venenatis dapibus id vel nisl. Fusce sit amet nulla nec justo malesuada fringilla. Aliquam erat volutpat. Nullam ac metus vestibulum, cursus purus vel, sollicitudin elit.",
+        "tags": ["#san-francisco", "#seoul", "#bangkok"],
+        "active": true
+    },
+    {
+        "serialNumber": 5,
+        "title": "Nature's Beauty",
+        "body": "In hac habitasse platea dictumst. Ut varius efficitur felis, eget cursus elit scelerisque ut. Nam in mi non tortor luctus dignissim. Duis nec leo et metus laoreet convallis a sit amet justo. Quisque vitae elit quis felis suscipit facilisis nec vitae ex. Integer in mauris et arcu convallis fermentum. In hac habitasse platea dictumst. Fusce eu dolor eu ipsum facilisis tristique. Pellentesque aliquet mauris vitae vestibulum semper. Curabitur nec purus vel odio interdum auctor id id sapien.",
+        "tags": ["#vancouver", "#auckland", "#cape-town"],
+        "active": true
+    },
+    {
+        "serialNumber": 6,
+        "title": "Healthy Living",
+        "body": "Vestibulum fermentum euismod sem eu euismod. Proin vitae risus eget justo commodo tincidunt. Duis interdum nibh vel felis commodo, eu tincidunt neque cursus. Integer at velit ut nisi posuere cursus. Vivamus id nulla quam. Fusce eleifend euismod quam eu bibendum. Sed feugiat urna in tortor malesuada, eu sollicitudin velit semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc euismod semper lectus, vel bibendum purus venenatis non. Nulla facilisi. Maecenas efficitur nunc nec elit semper tempus.",
+        "tags": ["#los-angeles", "#mexico-city", "#rio-de-janeiro"],
+        "active": true
+    },
+    {
+        "serialNumber": 7,
+        "title": "Travel Diaries",
+        "body": "Donec tincidunt purus non justo scelerisque, a venenatis quam facilisis. Nam sodales accumsan velit. Sed eu mauris vel ligula vehicula hendrerit in eu elit. Ut lacinia libero eu malesuada varius. Morbi fringilla turpis nec libero vulputate, vel dictum lacus venenatis. Praesent bibendum est non hendrerit facilisis. Integer cursus quam et dui sagittis, ut posuere risus varius. Etiam nec velit ut neque euismod imperdiet. In hac habitasse platea dictumst. Nullam bibendum, leo in euismod suscipit, purus nisi bibendum arcu, nec hendrerit metus ex vitae dolor.",
+        "tags": ["#rome", "#athens", "#cairo"],
+        "active": true
+    },
+    {
+        "serialNumber": 8,
+        "title": "Artistic Expression",
+        "body": "Cras congue arcu sit amet mauris gravida, non tristique tortor semper. Fusce auctor purus at quam ultricies. Integer at sapien vel augue euismod fermentum at nec orci. Aliquam erat volutpat. Sed vel arcu euismod, posuere lectus sit amet, semper justo. Sed tincidunt augue vel libero euismod, nec rhoncus leo feugiat. Aenean bibendum, sem id suscipit fermentum, erat lacus bibendum nunc, vitae cursus neque ex id est. Quisque sit amet urna quis erat vulputate aliquet a a libero. Vivamus bibendum neque et velit blandit, vel ultricies quam aliquet. Mauris ut libero tristique, tincidunt turpis vel, congue nunc.",
+        "tags": ["#berlin", "#madrid", "#lisbon"],
+        "active": true
+    }
+]

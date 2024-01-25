@@ -1,0 +1,89 @@
+<div class="modal-content" *ngIf="type=='edit' || type == 'add'">
+    <div class="modal-header">
+        <h4 class="modal-title" id="talkToUsModalLabel" *ngIf="type == 'edit' || type == 'add'">EDIT POST</h4>
+    </div>
+
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit(postForm)">
+
+        <div class="modal-body" *ngIf="type == 'edit' || type == 'add'">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="title">Title:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="title" name="title" formControlName="title" required>
+                </div>
+            </div>
+            <small class="text-danger" *ngIf="!this.postForm.get('title')?.errors?.['maxlength'] && !this.postForm.get('title')?.errors?.['minlength'] && postForm.get('title')?.invalid && (postForm.get('title')?.dirty || postForm.get('title')?.touched)">
+                Please provide a username.
+            </small>
+            <small class="text-danger" *ngIf="this.postForm.get('title')?.errors?.['minlength']">
+                Min length is {{ this.postForm.get('title')?.errors?.['minlength']?.requiredLength }}.
+            </small>
+            <small class="text-danger" *ngIf="this.postForm.get('title')?.errors?.['maxlength']">
+                Max length is {{ this.postForm.get('title')?.errors?.['maxlength']?.requiredLength }}.
+            </small>
+            <br>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="password">Body:</label>
+                </div>
+                <div class="col-auto">
+                    <textarea type="textarea" id="body" name="body" formControlName="body" required></textarea>
+                </div>
+            </div>
+            <small class="text-danger" *ngIf="!this.postForm.get('body')?.errors?.['minlength'] && postForm.get('body')?.invalid && (postForm.get('body')?.dirty || postForm.get('body')?.touched)">
+                Please provide a body.
+            </small>
+            <small class="text-danger" *ngIf="this.postForm.get('body')?.errors?.['minlength']">
+                Min length is {{ this.postForm.get('title')?.errors?.['minlength']?.requiredLength }}.
+            </small>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="password">Tags:</label>
+                </div>
+                <div class="col-auto">
+                    <ng-select [items]="selectedData" [multiple]=true bindLabel="name" bindValue="id"
+                        [hideSelected]="true" (click)="dataSelected()" (clear)="onClearAll()" formControlName="tags">
+                    </ng-select>
+                </div>
+            </div>
+            <small class="text-danger" *ngIf="postForm.get('tags')?.invalid && (postForm.get('tags')?.dirty || postForm.get('tags')?.touched)">
+                Please provide a tag.
+            </small>
+            <br>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="handleCallback(false,'cancel')">Cancel</button>
+            <button type="button" (click)="handleCallback(true, type)" class="btn btn-primary"
+                *ngIf="type == 'edit' || type == 'add'">Submit <span *ngIf="loading" class="spinner-border spinner-border-sm ms-2"
+                    role="status" aria-hidden="true"></span></button>
+        </div>
+    </form>
+
+</div>
+
+<div class="modal-content" *ngIf="type=='delete'">
+    <div class="modal-header">
+        <h4 class="modal-title" id="talkToUsModalLabel" *ngIf="type == 'delete' || type == 'add'">DELETE POST</h4>
+    </div>
+        <div class="modal-body" *ngIf="type == 'delete'">
+            Are you sure you want to delete this post
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="handleCallback(false,'cancel')">Cancel</button>
+            <button type="button" (click)="handleCallback(true, 'delete')" class="btn btn-primary"
+                *ngIf="type == 'delete'">Delete <span *ngIf="loading" class="spinner-border spinner-border-sm ms-2"
+                    role="status" aria-hidden="true"></span></button>
+        </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="createPostStyling mt-5">
+    <button class="btn btn-primary" type="button" (click)="crudPost('add','')">Add Post</button>
+    &nbsp;
+    <button class="btn btn-secondary" type="button" (click)="logout()">Logout</button>
+</div>
+
+<div class="container mt-5">
+    <div class="card" *ngFor="let post of postedData">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="post">
+                        <div class="user-info d-flex align-items-center">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <h4>{{ post.title }}</h4>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="badge bg-secondary">{{ post.active? 'Active': 'Inactive' }}</i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <p>{{ post.body }}</p>
+                        </div>
+
+                        <div class="post-actions d-flex justify-content-between align-items-center">
+                            <div class="action-buttons">
+                                <span>{{ post.tags }}</span>
+                            </div>
+                        </div><br>
+                        <button class="btn btn-primary" type="button" (click)="crudPost('edit', post)">Edit Post</button>
+                        &nbsp;
+                        <button class="btn btn-primary" type="button" (click)="crudPost('delete', post)">Delete Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
